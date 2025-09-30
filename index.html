@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mon Spotify Clone</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* On peut intégrer ici ou dans style.css */
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 8px 0;
+      background: #000;
+      z-index: 100; /* pour qu’il soit au-dessus */
+    }
+    body.light .footer-links {
+      background: #f0f0f0;
+    }
+    .footer-links a {
+      color: #00aaff; /* bleu vif */
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #1db954;
+    }
+
+    /* Pour que le .footer-links n’interfère pas avec la bottom-nav */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #333;
+      z-index: 50;
+    }
+
+    body.light .bottom-nav {
+      background: #eaeaea;
+      border-top: 1px solid #ccc;
+    }
+
+    .bottom-nav a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .bottom-nav a:hover {
+      color: #1db954;
+    }
+
+    /* Régle le contenu supérieur afin de ne pas être masqué derrière la bottom-nav */
+    body {
+      padding-bottom: 60px; /* laisse de l’espace pour la nav + liens */
+    }
+  </style>
 </head>
 <body class="dark">
   <header>
@@ -73,19 +133,19 @@
     <h2>Trending Songs</h2>
     <div class="carousel" id="trending-carousel">
       <div class="card">
-        <img src="legends.jpg" alt="Song 1" />
+        <img src="images/legends.jpg" alt="Song 1" />
         <p>Légendes</p>
       </div>
       <div class="card">
-        <img src="getting_paid.jpg" alt="Song 2" />
+        <img src="images/getting_paid.jpg" alt="Song 2" />
         <p>Getting Paid</p>
       </div>
       <div class="card">
-        <img src="ailleurs.jpg" alt="Song 3" />
+        <img src="images/ailleurs.jpg" alt="Song 3" />
         <p>Ailleurs</p>
       </div>
       <div class="card">
-        <img src="tant_pis.jpg" alt="Song 4" />
+        <img src="images/tant_pis.jpg" alt="Song 4" />
         <p>tant pis</p>
       </div>
     </div>
@@ -95,19 +155,19 @@
     <h2>Popular Artists</h2>
     <div class="carousel" id="artists-carousel">
       <div class="card">
-        <img src="Davido.jpg" alt="Artist 1" />
+        <img src="images/Davido.jpg" alt="Artist 1" />
         <p>Davido</p>
       </div>
       <div class="card">
-        <img src="Dadju.jpg" alt="Artist 2" />
+        <img src="images/Dadju.jpg" alt="Artist 2" />
         <p>Dadju</p>
       </div>
       <div class="card">
-        <img src="Aya.jpg" alt="Artist 3" />
+        <img src="images/Aya.jpg" alt="Artist 3" />
         <p>Aya Nakamura</p>
       </div>
       <div class="card">
-        <img src="Ronisia.jpg" alt="Artist 4" />
+        <img src="images/Ronisia.jpg" alt="Artist 4" />
         <p>Ronisia</p>
       </div>
     </div>
@@ -117,11 +177,11 @@
     <h2>Featured Charts</h2>
     <div class="carousel" id="charts-carousel">
       <div class="card chart">
-        <img src="top_songs_global.jpg" alt="Top Global" />
+        <img src="images/top_songs_global.jpg" alt="Top Global" />
         <p>Top Songs — Global</p>
       </div>
       <div class="card chart">
-        <img src="top_songs_usa.jpg" alt="Top USA" />
+        <img src="images/top_songs_usa.jpg" alt="Top USA" />
         <p>Top Songs — USA</p>
       </div>
     </div>
@@ -137,13 +197,15 @@
   </div>
 
   <footer class="main-footer">
-    <p>&copy; 2025 Mon Spotify Clone</p>
-    <div class="footer-links">
-      <a href="cookies.html">Cookies</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms & Conditions</a>
-    </div>
+    <p>© 2025 ࿇✞𝛭𝛪𝑇𝛮𝛪𝐶𝛫✞࿇. All Rights Reserved.</p>
   </footer>
+
+  <!-- Ici : les liens que tu veux voir -->
+  <div class="footer-links">
+    <a href="cookies.html">Cookies</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
 
   <nav class="bottom-nav">
     <a href="#" id="nav-home">
