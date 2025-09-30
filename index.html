@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Spotify Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  
+  <header>
+    <h1>Spotify</h1>
+    <div class="header-buttons">
+      <button id="theme-toggle">🌙</button>
+      <button id="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <aside id="sidebar">
+    <button id="close-btn">✖</button>
+    <ul>
+      <li><a href="#">Free Mobile App</a></li>
+      <li><a href="#">Popular by Country</a></li>
+      <li><a href="#">Import your music</a></li>
+    </ul>
+
+    <h3>Spotify Plans</h3>
+    <ul>
+      <li>Premium Individual</li>
+      <li>Premium Duo</li>
+      <li>Premium Family</li>
+      <li>Premium Student</li>
+      <li>Spotify Free</li>
+    </ul>
+
+    <h3>Company</h3>
+    <ul>
+      <li>About</li>
+      <li>Jobs</li>
+      <li>For the Record</li>
+    </ul>
+
+    <h3>Communities</h3>
+    <ul>
+      <li>For Artists</li>
+      <li>Developers</li>
+      <li>Advertising</li>
+      <li>Investors</li>
+      <li>Vendors</li>
+    </ul>
+
+    <h3>More Options</h3>
+    <ul>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Log out</a></li>
+    </ul>
+  </aside>
+
+  <div class="premium-banner">
+    <h3>Premium</h3>
+    <p>Listen without limits.<br>Try 1 month of Premium Individual for $0.</p>
+    <button>Try free for 1 month</button>
+    <a href="#">View all plans</a>
+  </div>
+
+  <div class="search-bar-container">
+    <input type="text" id="search-input" placeholder="Search music, artist...">
+  </div>
+
+<section class="carousel-section" id="trending-section">
+  <h2>Trending Songs</h2>
+  <div class="carousel" id="trending-carousel">
+    <div class="card">
+      <img src="images/legendsjpg" alt="Song 1">
+      <p>Légendes</p>
+    </div>
+    <div class="card">
+      <img src="images/getting paid.jpg" alt="Song 2">
+      <p>Getting Paid</p>
+    </div>
+    <div class="card">
+      <img src="images/allieurs.jpg" alt="Song 3">
+      <p>Ailleurs</p>
+    </div>
+  </div>
+</section>
+
+  <section class="carousel-section" id="artists-section">
+  <h2>Popular Artists</h2>
+  <div class="carousel" id="artists-carousel">
+    <div class="card">
+      <img src="images/Davido.jpg" alt="Artist 1">
+      <p>Davido</p>
+    </div>
+    <div class="card">
+      <img src="images/Dadju.jpg" alt="Artist 2">
+      <p>Dadju</p>
+    </div>
+    
+  </div>
+</section>
+
+ <section class="carousel-section" id="charts-section">
+  <h2>Featured Charts</h2>
+  <div class="carousel" id="charts-carousel">
+    <div class="card chart">
+      <img src="images/top songs global.jpg" alt="Top Global">
+      <p>Top Songs — Global</p>
+    </div>
+    <div class="card chart">
+      <img src="images/top songs usa.jpg" alt="Top USA">
+      <p>Top Songs — USA</p>
+    </div>
+
+  </div>
+</section>
+
+  <div class="playlist-container" id="playlist-container">
+    <input type="text" id="playlist-search" placeholder="Filter tracks...">
+    <ul class="playlist" id="playlist">
+   </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Mon Spotify Clone</p>
+  </footer>
+
+  <nav class="bottom-nav">
+    <a href="#" id="nav-home">
+      <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M12 3l9.5 9.5-1.4 1.4L18 11.8V21h-5v-5H11v5H6v-9.2l-2.1 2.1-1.4-1.4L12 3z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#" id="nav-search">
+      <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M10,20a8,8 0 1,1 8-8A8,8 0 0,1 10,20Zm0-14a6,6 0 1,0 6,6A6,6 0 0,0 10,6Zm11,17-5.5-5.5 1.41-1.41L22.41,22Z"/></svg>
+      <span>Search</span>
+    </a>
+    <a href="#" id="nav-library">
+      <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h12v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <span>Your Library</span>
+    </a>
+    <a href="#" id="nav-premium" class="premium-link">
+  <svg viewBox="0 0 24 24" class="icon star-icon">
+    <polygon fill="currentColor" points="12,2 14.9,8.7 22,9.3 16,14.3 17.8,21 12,17.8 6.2,21 8,14.3 2,9.3 9.1,8.7" />
+  </svg>
+  <span>Premium</span>
+</a>
+  </nav>
+
+  <div id="ripple-container"></div>
+
+ <div class="media-player">
+  <button id="close-player-btn" title="Fermer le lecteur">✖</button>
+  <img src="images/cover.jpg" alt="Cover" class="media-cover">
+  <div class="media-info">
+    <p class="media-title">Titre de la piste</p>
+    <video id="media" src="media/sample.mp4" controls></video>
+  </div>
+  <div class="media-controls">
+    <button id="prev-btn">⏮</button>
+    <button id="play-btn">▶️</button>
+    <button id="next-btn">⏭</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
